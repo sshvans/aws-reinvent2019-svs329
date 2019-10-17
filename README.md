@@ -111,7 +111,7 @@ Now, create the `Count_Intent` intent , an action that the user wants to perform
 To create an intent:  
 
 1.  In the Amazon Lex console, choose the plus sign (+) next to **Intents**, and then choose **Create intent**.
-2.  In the **Create intent** dialog box, type the name of the intent (Count_Intent), and then choose **Add**.
+2.  In the **Create intent** dialog box, type the name of the intent as `Count_Intent`, and then choose **Add**.
 
 ## Step 6: Create Slot types
 
