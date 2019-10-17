@@ -202,4 +202,10 @@ bash build-bot.sh
 
 ## Step 11: Test BI bot
 
-To query 
+1. Go to **Amazon Lex** console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
+2. Click **Bots** and then click **BIBot**.
+3. On the right, click **Test Chatbot**.
+4. In the **Test Bot** window, use following *Sample Utterances*:
+	- hello
+	- what were the top shows in houston in june
+	- compare sales for allman brothers band and goo goo dolls
