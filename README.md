@@ -1,7 +1,7 @@
 # Build a conversational chatbot to gain business insights
 Conversational interfaces are transforming the way people interact with software applications and services. Increasingly, people are opting to interact with a bot when they need an answer to a question, to set a reminder, or to obtain a product or service.
 
-With Amazon Lex, we can bring this same level of convenience to data. By allowing users to explore datasets by asking a series of questions, and maintaining a conversational context, we can provide a whole new experience and relationship with data.
+With Amazon Lex, you can bring this same level of convenience to data. By allowing users to explore datasets by asking a series of questions, and maintaining a conversational context, you can provide a whole new experience and relationship with data.
 
 ## Introduction
 
@@ -14,7 +14,7 @@ In this lab, you will learn how to use Amazon Lex to implement a business intell
 	1.  Go to the Cloud9 console.
 	2. Choose the **Create environment** button.
 	3. On the  **Name environment**  page, for  **Name**, enter `BuilderSession`.
-	4. To add a description to your environment, enter it in  **Description**.
+	4. (Optional) To add a description to your environment, enter it in  **Description**.
 	5. Choose  **Next step**.
 	6. On the **Configure settings** page, for **Environment type**, choose **Create a new instance for environment (EC2)**.
 	7. Leave rest of the values to default.
@@ -23,21 +23,32 @@ In this lab, you will learn how to use Amazon Lex to implement a business intell
 	10. After AWS Cloud9 creates your environment, it displays the AWS Cloud9 IDE for the environment. 
 3. Clone lab github repo in Cloud9 IDE:
 	1. Go to Cloud9 environment you just created.
-	2. On the bottom half of your IDE, you will see a termial window. Run following command to clone lab github repo.
+	2. On the bottom half of your IDE, you will see a termial window. Feel free to resize that window as you feel appropriate. Run following command to clone lab github repo.
 	 `git clone https://github.com/sshvans/amazon-lex-bi-bot.git`
 
-## Step 1: Create sample database
+### Summary
+You have successfully setup a a cloud IDE and cloned the lab github repository.
+
+**Note:** *Replace YOUR_INITIALS with initials of your name.*
 
 1. Go to AWS S3 console and create a bucket with name `YOUR_INITIALS-bibot-tickit-data`. This is the bucket where you will store a copy of the TICKIT sample data.
 2. Create another S3 bucket called `YOUR_INITIALS-bibot-db-output`. This S3 bucket will be used for Athena to store output from queries.
-3. Go to your Cloud9 IDE and run following commands, to copy TICKIT sample data files to your S3 bucket.
+3. Set environment variables:
+	1. Go to your Cloud9 IDE, open file *export-env.sh*.
+	2.  Provide the value for your Athena S3 bucket you created above. Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-tickit-data`
+	3. **Save** the file.
+	4. In terminal window, run the following command to set the updated values.
+		```
+		cd amazon-lex-bi-bot
+		source export-env.sh
+		```
+4. In your Cloud9 IDE terminal window, run the following commands to copy TICKIT sample data files to your S3 bucket.
 	```
-	cd amazon-lex-bi-bot  
-	bash copy-db.sh YOUR_INITIALS-bibot-tickit-data
+	bash copy-db.sh
 	```
-4. Next, run following commands from your Cloud9 IDE terminal, to create Athena database.
+5. Next, run following commands from your Cloud9 IDE terminal, to create Athena database.
 `bash build-db.sh`
-5. You have successfully setup a TICKIT sample database.
+6. You have successfully setup a TICKIT sample database.
 
 ## Step 2: Create IAM role
 
