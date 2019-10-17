@@ -129,10 +129,9 @@ To create slot types:
 		-  All opera and light opera
 		-  All non-musical theatre
 		-  All rock and pop music concerts
-3.  You dialog should look like below: add image
-4.  Choose **Add slot to intent**.
-5.  On the **Intent** page, keep **Required** checkbox **unchecked**. Change the name of the slot from **`slotOne`** to **`cat_desc`**. Change the prompt to **`The type of event`**
-6.  Repeat Step 1 through Step 4 using the values in the following table:
+3.  Choose **Add slot to intent**.
+4.  On the **Intent** page, keep **Required** checkbox **unchecked**. Change the name of the slot from **`slotOne`** to **`cat_desc`**. Change the prompt to **`The type of event`**
+5.  Repeat Step 1 through Step 4 using the values in the following table:
 
 |  Name | Description | Values | Slot name | Prompt
 |--|--|--|--|--|
@@ -146,6 +145,7 @@ To create slot types:
 |venue_city|AMAZON.US_CITY|The city where the event takes place|
 |venue_state|AMAZON.US_STATE|The state where the event takes place|
 |venue_name|AMAZON.MusicVenue|The venue where the event takes place|
+8. Scroll down on the intent page and click **Save**.
 
 ## Step 7: Configure the Intent
 
@@ -166,7 +166,7 @@ To configure the intent, on the `Content_Intent` configuration page, configure t
 3.  **Confirmation prompt** – Leave the default setting.
 4.  **Fulfillment** – Perform the following tasks:
 	1.  Choose **AWS Lambda function**.
-	2.  Choose `**BIBot_Count_Intent**`.
+	2.  Choose `BIBot_Count_Intent`.
 	3.  If the **Add permission to Lambda function** dialog box is shown, choose **OK** to give the `Count_Intent` intent permission to call the `BIBot_Count_Intent` Lambda function.
 	4.  Leave **None** selected.
 5.  **Response** - Perform the following tasks:
