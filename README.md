@@ -44,13 +44,12 @@ You have successfully setup a a cloud IDE and cloned the lab github repository.
 		cd amazon-lex-bi-bot
 		source export-env.sh
 		```
-4. In your Cloud9 IDE terminal window, run the following commands to copy TICKIT sample data files to your S3 bucket.
+4. In your Cloud9 IDE terminal window, run the following commands to copy TICKIT sample data files to your S3 bucket and build TICKIT database.
 	```
-	bash copy-db.sh
+	bash setup-db.sh
 	```
-5. Next, run following commands from your Cloud9 IDE terminal, to create Athena database.
-`bash build-db.sh`
-6. You have successfully setup a TICKIT sample database.
+### Summary
+You have successfully created a sample TICKIT database which will be used by your BIBot.
 
 ## Step 2: Create IAM role
 
