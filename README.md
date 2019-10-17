@@ -70,21 +70,29 @@ You have created an IAM role which you will use with the Lambda function to give
 
 You will use lambda functions which will fulfill the requests from Amazon Lex. It will perform queries on the Athena TICKIT sample database, and send response back to Amazon Lex.
 
-We have created a script to expedite the process of creating Lambda function. Script needs few environment variables such as Lambda IAM role ARN, AWS region, etc.
+We have created a script to expedite the process of creating Lambda function. Script need a *Lambda IAM role ARN* environment variable, to run successfully.
 
-To set environment variables:
-1. In your Cloud9 IDE, open file *custom/export-env.sh*.
+To set environment variable:
+1. In your Cloud9 IDE, open file *export-env.sh*.
 2.  Provide the value for LAMBDA_ROLE_ARN. Replace `REPLACE-ME-LAMBDA-IAM-ROLE-ARN` with the IAM role ARN you copied in Step 2 above.
 3. **Save** the file.
 4. In terminal window, run the following command to set the updated values for the LAMBDA_ROLE_ARN environment variable.
-`source custom/export-env.sh`
+`source export-env.sh`
 
 To create Lambda functions:
 1. In your terminal window run the following commands.
 	```
-	cd amazon-lex-bi-bot  
-	bash create-lambda.sh
+	cd lambda
+	bash ../create-lambda.sh
 	```
+
+## Recap
+
+So far, you have successfully created:
+- An Athena database with sample TICKIT database.
+- An IAM role for the Lambda functions which gives permission to perform queries on Athena database and store its output on S3.
+- Lambda functions for each intent
+
 ## Step 4: Create Amazon Lex Bot
 
 1.  Sign in to the AWS Management Console and open the Amazon Lex console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
