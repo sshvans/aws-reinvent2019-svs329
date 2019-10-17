@@ -95,15 +95,14 @@ So far, you have successfully created:
 
 ## Step 4: Create Amazon Lex Bot
 
-1.  Sign in to the AWS Management Console and open the Amazon Lex console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
-2. Create a bot.
-3.  If you are creating your first bot, choose **Get Started**. Otherwise, choose **Bots**, and then choose **Create**.
-4.  On the **Create your Lex bot** page, choose **Custom bot** and provide the following information:
+1.  In a new tab, open the Amazon Lex console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
+2.  If you are creating your first bot, choose **Get Started**. Otherwise, choose **Bots**, and then choose **Create**.
+3.  On the **Create your Lex bot** page, choose **Custom bot** and provide the following information:
 	-  **App name**: BIBot
 	-  **Output voice**: Matthew
 	-  **Session timeout** : 5 minutes.
 	-  **COPPA**: Choose No.
-5.  Choose **Create**.
+4.  Choose **Create**.
 
 ## Step 5: Create Intent
 
