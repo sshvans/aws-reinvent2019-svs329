@@ -29,6 +29,8 @@ In this lab, you will learn how to use Amazon Lex to implement a business intell
 ### Summary
 You have successfully setup a a cloud IDE and cloned the lab github repository.
 
+## Step 1: Create sample database
+
 **Note:** *Replace YOUR_INITIALS with initials of your name.*
 
 1. Go to AWS S3 console and create a bucket with name `YOUR_INITIALS-bibot-tickit-data`. This is the bucket where you will store a copy of the TICKIT sample data.
