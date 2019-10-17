@@ -53,9 +53,18 @@ You have successfully created a sample TICKIT database which will be used by you
 
 ## Step 2: Create IAM role
 
+**Note:**  *Replace YOUR_INITIALS with initials of your name.*
+
 1. From your Cloud9 IDE terminal, run following command to launch a cloudformation stack, which will create a Lambda execution IAM role.
-`aws cloudformation create-stack --stack-name YOUR_INITIALS-bbot-iam-roles --template-body file://custom/iam-roles.yaml --region us-west-2 --capabilities CAPABILITY_IAM`
-2. Once the stack creation is complete, you will have the necessary IAM role created, which you will use with Lambda functions, later in the lab. Make a note of the IAM role ARN, which will be needed in the next lab.
+`aws cloudformation create-stack --stack-name YOUR_INITIALS-bbot-iam-roles --template-body file://iam-roles.yaml --region us-west-2 --capabilities CAPABILITY_IAM`
+2. Make a note of the IAM role ARN:
+	1. In a new tab, open the AWS CloudFormation console.
+	2. From the list of stack, click the CloudFormation stack named **YOUR_INITIALS-bbot-iam-roles**. If the stack is still in-progress, wait for it to complete.
+	3. Click **Outputs** tab.
+	4. Make a note of the **IAMRoleArn** value.
+
+### Summary
+You have created an IAM role which you will use with the Lambda function to give it a permission to perform actions on Amazon Athena, Amazon S3, and Amazon Lex.
 
 ## Step 3: Create Lambda functions
 
