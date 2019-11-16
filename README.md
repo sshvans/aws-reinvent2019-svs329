@@ -36,18 +36,19 @@ You have successfully setup a a cloud IDE and cloned the lab github repository.
 1. Go to AWS S3 console and create a bucket with name `YOUR_INITIALS-bibot-tickit-data`. This is the bucket where you will store a copy of the TICKIT sample data.
 2. Create another S3 bucket called `YOUR_INITIALS-bibot-db-output`. This S3 bucket will be used for Athena to store output from queries.
 3. Set environment variables:
-	1. Go to your Cloud9 IDE, open file *export-env.sh*.
-	2.  Provide the value for your Athena S3 bucket you created above. Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-tickit-data`
+	1. Go to your Cloud9 IDE, open file *amazon-lex-bi-bot/export-env.sh*.
+	2. Provide the value for your Athena S3 bucket you created above. 
+		- Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-tickit-data`
+		- Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-db-output`
 	3. **Save** the file.
 	4. In terminal window, run the following command to set the updated values.
-		```
-		cd amazon-lex-bi-bot
-		source export-env.sh
-		```
+		`cd amazon-lex-bi-bot && source export-env.sh`
 4. In your Cloud9 IDE terminal window, run the following commands to copy TICKIT sample data files to your S3 bucket and build TICKIT database.
 	```
 	bash setup-db.sh
 	```
+5. You can go to [Amazon Athena console](https://us-west-2.console.aws.amazon.com/athena/home) and see **tickit** database.
+
 ### Summary
 You have successfully created a sample TICKIT database which will be used by your BIBot.
 
