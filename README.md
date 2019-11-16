@@ -39,7 +39,7 @@ You have successfully setup a a cloud IDE and cloned the lab github repository.
 	1. Go to your Cloud9 IDE, open file *amazon-lex-bi-bot/export-env.sh*.
 	2. Provide the value for your Athena S3 bucket you created above. 
 		- Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-tickit-data`
-		- Replace `REPLACE-ME-ATHENA-BUCKET` with the bucket name `YOUR_INITIALS-bibot-db-output`
+		- Replace `REPLACE-ME-OUTPUT-BUCKET` with the bucket name `YOUR_INITIALS-bibot-db-output`
 	3. **Save** the file.
 	4. In terminal window, run the following command to set the updated values.
 		`cd amazon-lex-bi-bot && source export-env.sh`
@@ -181,8 +181,8 @@ Configure error handling for the `BIBot` bot.
 
 1.  Navigate to the `BIBot` bot. Choose **Editor**. and then choose **Error Handling**.
 2.  Use the **Editor** tab to configure bot error handling.
-	-  In **Clarification Prompts** text box, enter `Come again?` and click **+** symbol**.**
-3.  Click **Save.**
+	-  In **Clarification Prompts** text box, enter `Come again?` and click **+** symbol.
+3.  Click **Save**.
 
 ## Step 9: Build and test the bot
 
@@ -204,9 +204,10 @@ bash build-bot.sh
 ## Step 11: Test BI bot
 
 1. Go to **Amazon Lex** console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
-2. Click **Bots** and then click **BIBot**.
-3. On the right, click **Test Chatbot**.
-4. In the **Test Bot** window, use following *Sample Utterances*:
+2. You will see **BIBot** in **BUILDING** status. Wait for it to finish and go to **READY** status.
+3. Click **Bots** and then click **BIBot**.
+4. On the right, click **Test Chatbot**.
+5. In the **Test Bot** window, use following *Sample Utterances*:
 	- hello
 	- what were the top shows in houston in june
-	- compare sales for allman brothers band and goo goo dolls
+	- how about chicago
