@@ -211,3 +211,15 @@ bash build-bot.sh
 	- hello
 	- what were the top shows in houston in june
 	- how about chicago
+
+## Cleanup
+
+Apply the AWS Credit to your AWS Account and follow the below steps to delete all the resources you created as part of this lab.
+
+1. Delete Lex bot, intents, slots, lambda functions and Athena database, by running the following command from your Cloud9 IDE.
+	- `bash delete.sh`
+2. Delete Cloud9 IDE
+3. Delete S3 buckets
+	- `YOUR_INITIALS-bibot-tickit-data`
+	- `YOUR_INITIALS-bibot-db-output`
+4. Delete CloudFormation stack, created for IAM roles.
