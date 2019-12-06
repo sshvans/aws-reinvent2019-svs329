@@ -152,7 +152,7 @@ To create slot types:
 
 Configure the `Count_Intent` intent to fulfill a user's request.  
   
-To configure the intent, on the `Content_Intent` configuration page, configure the intent as follows:  
+To configure the intent, on the `Count_Intent` configuration page (you should already be on the page), configure the intent as follows:  
 
 1.  **Sample utterances** – Type the following strings. The curly braces {} enclose slot names.
 	-  How many tickets were sold
